@@ -1,0 +1,6 @@
+
+@import './mixins/clearfix.scss';
+
+.sd-clearfix {
+    @include clearfix();
+}

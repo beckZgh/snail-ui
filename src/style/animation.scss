@@ -1,0 +1,132 @@
+@import './var.scss';
+
+@keyframes sd-slide-up-enter {
+    from {
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+@keyframes sd-slide-up-leave {
+    to {
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+
+@keyframes sd-slide-down-enter {
+    from {
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+@keyframes sd-slide-down-leave {
+    to {
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+
+@keyframes sd-slide-left-enter {
+    from {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes sd-slide-left-leave {
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes sd-slide-right-enter {
+    from {
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
+@keyframes sd-slide-right-leave {
+    to {
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
+
+@keyframes sd-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes sd-fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes sd-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.sd-fade {
+    &-enter-active {
+        animation: $animation-duration-base sd-fade-in both $animation-timing-function-enter;
+    }
+    
+    &-leave-active {
+        animation: $animation-duration-base sd-fade-out both $animation-timing-function-enter;
+    }
+}
+
+.sd-slide-up {
+    &-enter-active {
+        animation: sd-slide-up-enter $animation-duration-base both $animation-timing-function-enter;
+    }
+    
+    &-leave-active {
+        animation: sd-slide-up-leave $animation-duration-base both $animation-timing-function-enter;
+    }
+}
+
+.sd-slide-down {
+    &-enter-active {
+        animation: sd-slide-down-enter $animation-duration-base both $animation-timing-function-enter;
+    }
+    
+    &-leave-active {
+        animation: sd-slide-down-leave $animation-duration-base both $animation-timing-function-enter;
+    }
+}
+
+.sd-slide-left {
+    &-enter-active {
+        animation: sd-slide-left-enter $animation-duration-base both $animation-timing-function-enter;
+    }
+
+    &-leave-active {
+        animation: sd-slide-left-leave $animation-duration-base both $animation-timing-function-leave;
+    }
+}
+
+.sd-slide-right {
+    &-enter-active {
+        animation: sd-slide-right-enter $animation-duration-base both $animation-timing-function-enter;
+    }
+
+    &-leave-active {
+        animation: sd-slide-right-leave $animation-duration-base both $animation-timing-function-leave;
+    }
+}

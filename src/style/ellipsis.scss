@@ -1,0 +1,14 @@
+
+@import './mixins/ellipsis.scss';
+
+.sd-ellipsis {
+    @include ellipsis;
+}
+
+.sd-multi-ellipsis--l2 {
+    @include multi-ellipsis(2);
+}
+
+.sd-multi-ellipsis--l3 {
+    @include multi-ellipsis(3);
+}
